@@ -25,6 +25,31 @@ Lastly (and perhaps, most importantly) It is completely cross platform. It works
 ## Requirements
 To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim), you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
+## Installation Steps
+* Install Lua
+``` 
+  curl -R -O http://www.lua.org/ftp/lua-5.2.2.tar.gz
+  tar zxf lua-5.2.2.tar.gz
+  cd lua-5.2.2
+  "manually change the makefile to /usr/local/lua"
+  sudo make linux install
+```
+* Install VIM
+```
+  git clone https://github.com/vim/vim.git
+  cd vim/src
+  make distclean  # if you build Vim before
+  ./configure --with-features=huge \
+            --enable-rubyinterp \
+            --enable-perlinterp \
+            --enable-gui=gtk2 --enable-cscope \
+            --enable-luainterp \
+            --with-lua-prefix=/usr/local/lua \
+            --enable-luainterp=yes
+  make
+  sudo make instll
+```
+
 ## Linux, \*nix, Mac OSX Installation
 
 The easiest way to install spf13-vim is to use our [automatic installer](https://j.mp/tax-vim) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
