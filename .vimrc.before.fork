@@ -21,3 +21,5 @@ endif
 
 let g:spf13_override_snippets = 1
 let g:spf13_no_big_font = 1
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
