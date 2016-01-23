@@ -26,3 +26,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "Mac ACK does not supoort '-s' option
 let g:ack_default_options = " -s -H --nocolor --nogroup --column"
+
+let g:spf13_no_autochdir = 1
