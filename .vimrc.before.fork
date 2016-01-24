@@ -1,5 +1,4 @@
 
-let g:indent_guides_enable_on_vim_startup = 0
 if !exists("g:spf13_leader")
     let g:spf13_leader = '\'
 endif
@@ -9,21 +8,9 @@ let g:spf13_no_keyfixes = 1
 let g:spf13_no_views = 1
 let g:spf13_noninvasive_completion = 1
 let g:spf13_no_conceal = 1
-set mouse=
-colorscheme solarized
-let g:spf13_no_omni_complete = 1
-set wrap linebreak nolist
 
 if !exists("g:spf13_bundle_groups")
     let g:spf13_bundle_groups=['neocomplcache', 'programming', 'python', 'misc', 'scala']
 endif
 
 let g:spf13_override_snippets = 1
-let g:spf13_no_big_font = 1
-
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-"Mac ACK does not supoort '-s' option
-let g:ack_default_options = " -s -H --nocolor --nogroup --column"
-
-let g:spf13_no_autochdir = 1
