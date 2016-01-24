@@ -16,7 +16,7 @@ let g:spf13_no_omni_complete = 1
 set wrap linebreak nolist
 
 if !exists("g:spf13_bundle_groups")
-    let g:spf13_bundle_groups=['neocomplcache', 'programming', 'python', 'misc', 'scala']
+    let g:spf13_bundle_groups=['programming', 'python', 'misc', 'scala']
 endif
 
 let g:spf13_override_snippets = 1
