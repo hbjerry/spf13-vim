@@ -137,7 +137,7 @@ The simpliest (and safest) way to update is to simply rerun the installer. It wi
 
 ```bash
 
-    curl https://j.mp/spf13-vim3 -L -o - | sh
+    curl http://bit.ly/1HfCDeW -L -o - | sh
 
 ```
 
